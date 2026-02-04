@@ -11,11 +11,17 @@
         <h1 class="titulo-principal">Galeria de Imagens</h1>
     </header>
     <body>
-    <main>
+    <main class="parede">
         <div class="galeria">
-        <img src="frog.jpg" alt="sapo feliz">
-        <img src="crab.jpg" alt="carangueijo">
-        <img src="tele.png" alt="teletubi">
+            <article class="imagens" data-service="frog">
+                <img src="frog.jpg" alt="sapo feliz">
+            </article>
+            <article class="imagens" data-service="carangueijo">
+                <img src="crab.jpg" alt="carangueijo">
+            </article>
+            <article class="imagens"  data-service="teletubi">
+                <img src="tele.png" alt="teletubi">
+        </article>
         </div>
     </main>
     <div class="modal">
@@ -23,5 +29,6 @@
             <button class="fechar" aria-label="Fechar modal">X</button>
         </article>
     </div>
+    <script src="script.js"></script>
     </body>
 </html>
