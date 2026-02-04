@@ -1,10 +1,15 @@
-const parede = document.querySelector("parede");
-const galeria = document.getElementsByClassName("galeria");
-const imagens = document.querySelectorAll(".imagens");
+const parede = document.querySelector(".parede");
+const modal = document.querySelector(".modal");
+const modalImg = document.querySelector(".galeria-imagem");
+const fechar = document.querySelector(".fechar");
 
+parede.addEventListener("click", (e) => {
+  const img = e.target.closest(".galeria-img");
+  console.log("clicado:", img);
 
-imagens.forEach((imagem) => {
-  imagem.addEventListener("click", (event) => {
-    console.log("Elemento clicado:", event.target);
-  });
+  if (!img) return;
+
+  modalImg.src = img.src;
+  modal.classList.add("ativo");
 });
+
